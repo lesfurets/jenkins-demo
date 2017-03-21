@@ -6,3 +6,5 @@
          Jenkinsfile.stage(Build and test, groovy.lang.Closure)
             Jenkinsfile.sh(./gradlew build)
             Jenkinsfile.junit(build/test-results/test/*.xml)
+         Jenkinsfile.stage(Archive test reports, groovy.lang.Closure)
+            Jenkinsfile.archiveArtifacts(build/reports/**/*.*)

@@ -18,6 +18,7 @@ class TestJenkinsfile extends BaseRegressionTestCPS {
                 submoduleCfg                     : [],
                 userRemoteConfigs                : [[ url          : "/var/git-repo" ]]
         ])
+        helper.registerAllowedMethod('archiveArtifacts', [String.class], null)
     }
 
     @Test
