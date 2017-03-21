@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<scriptApproval plugin="script-security@1.27">
+  <approvedScriptHashes/>
+  <approvedSignatures>
+    <string>method java.lang.Class isInstance java.lang.Object</string>
+    <string>method java.time.chrono.ChronoLocalDateTime toLocalDate</string>
+    <string>method java.time.temporal.TemporalUnit between java.time.temporal.Temporal java.time.temporal.Temporal</string>
+    <string>staticField java.time.temporal.ChronoUnit DAYS</string>
+    <string>staticMethod java.lang.Long parseLong java.lang.String</string>
+    <string>staticMethod java.time.LocalDate now</string>
+    <string>staticMethod java.time.LocalDateTime ofEpochSecond long int java.time.ZoneOffset</string>
+    <string>staticMethod java.time.ZoneOffset of java.lang.String</string>
+    <string>new java.util.ArrayList java.util.Collection</string>
+    <string>staticMethod org.codehaus.groovy.runtime.DefaultGroovyMethods getAt java.util.List java.util.Collection</string>
+  </approvedSignatures>
+  <aclApprovedSignatures/>
+  <approvedClasspathEntries/>
+  <pendingScripts/>
+  <pendingSignatures/>
+  <pendingClasspathEntries/>
+</scriptApproval>
