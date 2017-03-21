@@ -21,8 +21,8 @@ class TestJenkinsfile extends BaseRegressionTestCPS {
     }
 
     @Test
-    void testJenkinsFile() throws Exception {
+    void testNonRegression() throws Exception {
         loadScript('Jenkinsfile')
-        printCallStack()
+        super.testNonRegression(false)
     }
 }
