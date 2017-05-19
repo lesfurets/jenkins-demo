@@ -18,7 +18,17 @@ class TestJenkinsfile extends BaseRegressionTestCPS {
                 submoduleCfg                     : [],
                 userRemoteConfigs                : [[ url          : "/var/git-repo" ]]
         ])
-        helper.registerAllowedMethod('archiveArtifacts', [String.class], null)
+        helper.registerAllowedMethod('sh', [Map.class], { args ->
+            if (args.script == 'git rev-parse HEAD') {
+                return '2345aef'
+            } else {
+                throw new IllegalArgumentException()
+            }
+        })
+        helper.registerAllowedMethod( 'writeFile', [Map.class], { args ->
+            println "MOCK: Writing '${args.text}' to <${args.file}>"
+        })
+        helper.registerAllowedMethod('archive', [String.class], null)
     }
 
     @Test
