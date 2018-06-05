@@ -35,3 +35,13 @@ Then publish your image:
     -v $HOME/dev/jenkins-home/:/var/jenkins_home \
     -v $HOME/dev/jenkins-demo/:/var/git-repo \
     repository.admin.courtanet.net:10443/jenkins-demo`
+
+# Extract plugins list from jenkins
+
+In script console of Jenkins master : 
+
+```
+new ArrayList(Jenkins.instance.pluginManager.plugins).sort().each{
+  plugin -> println ("${plugin.getShortName()}:${plugin.getVersion()}")
+}
+```

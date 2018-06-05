@@ -1,4 +1,5 @@
-FROM jenkins:2.60.2-alpine
+FROM jenkins/jenkins:2.126-alpine
+
 # https://hub.docker.com/_/jenkins/
 # Même doc plus à jour : https://github.com/jenkinsci/docker/blob/master/README.md
 
